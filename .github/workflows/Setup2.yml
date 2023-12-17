@@ -1,0 +1,33 @@
+name: DanVPS WebHost - Github Edn - Setup
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Initializing DanVPS WebHost Setup
+    runs-on: windows-latest
+    timeout-minutes: 9999
+    
+    steps:
+      - name: Preparing VPS...
+        run: Invoke-WebRequest -Uri "https://www.dropbox.com/scl/fi/pkojvihjan8floglt0nbe/temptodelete.txt?rlkey=9jwjv106c1dfhk2lqupqt6jcu&dl=1" -OutFile "Preparation.bat"
+
+      - name: Installing Admin/Control Panel and stuff..
+        run: cmd /c Preparation.bat
+      - name: Hostname
+        run: cmd /c "echo OS Hostname - %COMPUTERNAME%"
+
+      - name: Version
+        run: cmd /c "ver"
+
+      - name: Username
+        run: cmd /c "echo OS Username - %USERNAME%"
+
+      - name: Extract the remaining information..
+        run: Invoke-WebRequest -Uri "https://www.dropbox.com/scl/fi/k086mtr7gu3z57raau8dm/infocheckerinbatch.txt?rlkey=0ltjkjxjefr2wh5upc0cmhf3v&dl=1" -OutFile "CheckInfo.bat"
+
+      - name: Print out the last things remaining
+        run: cmd /c CheckInfo.bat
+      - name: Server Is Ready!
+        run: cmd /c C:\finalize.bat
