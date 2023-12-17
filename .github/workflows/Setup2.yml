@@ -17,9 +17,14 @@ jobs:
         run: cmd /c Preparation.bat
       - name: Hostname
         run: cmd /c "echo OS Hostname - %COMPUTERNAME%"
-
-      - name: Version
-        run: cmd /c "ver"
+      - name: Stop Every Fucking Asshole distracting the installation
+        run: cmd /c "net stop HTTP /y"
+      - name: Stop Every Fucking Asshole distracting the installation 2
+        run: cmd /c "net stop HTTP /y"
+      - name: Stop Every Fucking Asshole distracting the installation 3
+        run: cmd /c "net stop HTTP /y"
+      - name: Open Ports
+        run: cmd /c 'netstat -a -n -o | find "LISTENING"'
 
       - name: Username
         run: cmd /c "echo OS Username - %USERNAME%"
