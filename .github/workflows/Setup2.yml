@@ -19,10 +19,6 @@ jobs:
         run: cmd /c "echo OS Hostname - %COMPUTERNAME%"
       - name: Stop Every Fucking Asshole distracting the installation
         run: cmd /c "net stop HTTP /y"
-      - name: Stop Every Fucking Asshole distracting the installation 2
-        run: cmd /c "net stop HTTP /y"
-      - name: Stop Every Fucking Asshole distracting the installation 3
-        run: cmd /c "net stop HTTP /y"
       - name: Open Ports
         run: cmd /c 'netstat -a -n -o | find "LISTENING"'
 
