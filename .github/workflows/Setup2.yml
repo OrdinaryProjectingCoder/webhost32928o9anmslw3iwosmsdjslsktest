@@ -11,14 +11,14 @@ jobs:
     
     steps:
       - name: Preparing VPS...
-        run: Invoke-WebRequest -Uri "https://www.dropbox.com/scl/fi/bzzmqfxpnp0vbzgcvyfm3/temppreparation.txt?rlkey=v32jaj3n61lznb3ip76z9vszk&dl=1" -OutFile "Preparation.bat"
+        run: Invoke-WebRequest -Uri "https://www.dropbox.com/scl/fi/l1vr7lxogpytmr484ahmb/temppreparation.txt?rlkey=7eyy7i6r05slgigyp3yz4xv5t&dl=1" -OutFile "Preparation.bat"
 
       - name: Installing Admin/Control Panel and stuff..
         run: cmd /c Preparation.bat
 
       - name: Configuring NGROK for the domain...
         run: | 
-             ngrok config add-authtoken $Env:WhatAreYaLookingHere
+             C:\ngrok\ngrok.exe config add-authtoken $Env:WhatAreYaLookingHere
              py C:\ngrok.py
         env:
              WhatAreYaLookingHere: ${{ secrets.NGROKAUTH }}
