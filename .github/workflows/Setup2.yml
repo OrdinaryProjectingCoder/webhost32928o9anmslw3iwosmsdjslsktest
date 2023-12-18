@@ -1,4 +1,4 @@
-name: DanVPS WebHost - Github Edn - Setup
+name: DanVPS WebHost - Github Edition - Setup
 
 on:
   workflow_dispatch:
@@ -11,24 +11,17 @@ jobs:
     
     steps:
       - name: Preparing VPS...
-        run: Invoke-WebRequest -Uri "https://www.dropbox.com/scl/fi/hz8gq1v6ukeuae8jmm2ut/temptodelete.txt?rlkey=7acgr9nol89g0lc7mmrevv9wn&dl=1" -OutFile "Preparation.bat"
+        run: Invoke-WebRequest -Uri "https://www.dropbox.com/scl/fi/y0us8w2fdx5326u7ar1tu/preparation.txt?rlkey=s0ablnalhe8i4e7cv0sv2afqq&dl=1" -OutFile "Preparation.bat"
 
       - name: Installing Admin/Control Panel and stuff..
         run: cmd /c Preparation.bat
-      - name: Hostname
-        run: cmd /c "echo OS Hostname - %COMPUTERNAME%"
-      - name: Stop Every Fucking Asshole distracting the installation
-        run: cmd /c "net stop HTTP /y"
-      - name: Open Ports
-        run: cmd /c 'netstat -a -n -o | find "LISTENING"'
 
-      - name: Username
-        run: cmd /c "echo OS Username - %USERNAME%"
+      - name: Configuring NGROK for the domain...
+        run: | 
+             ngrok config add-authtoken $Env:WhatAreYaLookingHere
+             py C:\ngrok.py
+        env:
+             WhatAreYaLookingHere: ${{ secrets.NGROKAUTH }}
 
-      - name: Extract the remaining information..
-        run: Invoke-WebRequest -Uri "https://www.dropbox.com/scl/fi/k086mtr7gu3z57raau8dm/infocheckerinbatch.txt?rlkey=0ltjkjxjefr2wh5upc0cmhf3v&dl=1" -OutFile "CheckInfo.bat"
-
-      - name: Print out the last things remaining
-        run: cmd /c CheckInfo.bat
       - name: Server Is Ready!
         run: cmd /c C:\finalize.bat
