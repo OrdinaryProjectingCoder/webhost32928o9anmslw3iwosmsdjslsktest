@@ -1,4 +1,4 @@
-name: DanVPS WebHost - Github Edition - Setup
+name: DanVPS WebHost - Github Edition - Old Setup
 
 on:
   workflow_dispatch:
