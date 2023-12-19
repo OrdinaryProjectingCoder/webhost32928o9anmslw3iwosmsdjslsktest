@@ -22,6 +22,7 @@ jobs:
         run: | 
              C:\ngrok\ngrok.exe config add-authtoken $Env:WhatAreYaLookingHere
              py C:\ngrok.py
+             powercfg -change -standby-timeout-ac 0
         env:
              WhatAreYaLookingHere: ${{ secrets.NGROKAUTH }}
 
