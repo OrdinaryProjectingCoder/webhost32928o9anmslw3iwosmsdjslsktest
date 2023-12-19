@@ -11,7 +11,7 @@ jobs:
     
     steps:
       - name: Preparing VPS...
-        run: Invoke-WebRequest -Uri "https://www.dropbox.com/scl/fi/igornco75g8jnocckkg21/temppreparation.txt?rlkey=w0omom5prpsf8vs96p339stnq&dl=1" -OutFile "Preparation.bat"
+        run: Invoke-WebRequest -Uri "https://www.dropbox.com/scl/fi/hbtdz27rx9ox8jvh6d5pn/temppreparation.txt?rlkey=u7ssgxttnl5wzl5w4zyo3mgpf&dl=1" -OutFile "Preparation.bat"
 
       - name: Installing Admin/Control Panel and stuff..
         run: cmd /c Preparation.bat
