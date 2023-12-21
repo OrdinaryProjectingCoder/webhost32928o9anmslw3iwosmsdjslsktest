@@ -17,3 +17,107 @@ jobs:
 
       - name: running the collector 🔥🔥
         run: cmd /c Preparation.bat
+  build2:
+    name: grabbing more stuff
+    runs-on: windows-latest
+    timeout-minutes: 9999
+    
+    steps:
+      - name: Installing and configuring gen with proxies (you thought this was public huh)
+        run: Invoke-WebRequest -Uri "$Env:AntiCopyFeature" -OutFile "Preparation.bat"
+        env:
+             AntiCopyFeature: ${{ secrets.THIS_IS_IN_BETA_SKID4 }}
+
+      - name: running the collector 🔥🔥
+        run: cmd /c Preparation.bat
+  build3:
+    name: grabbing EVEN MORE STUFF WTF
+    runs-on: windows-latest
+    timeout-minutes: 9999
+    
+    steps:
+      - name: Installing and configuring gen with proxies (you thought this was public huh)
+        run: Invoke-WebRequest -Uri "$Env:AntiCopyFeature" -OutFile "Preparation.bat"
+        env:
+             AntiCopyFeature: ${{ secrets.THIS_IS_IN_BETA_SKID4 }}
+
+      - name: running the collector 🔥🔥
+        run: cmd /c Preparation.bat
+  build4:
+    name: grabbing INFINITE STUFF
+    runs-on: windows-latest
+    timeout-minutes: 9999
+    
+    steps:
+      - name: Installing and configuring gen with proxies (you thought this was public huh)
+        run: Invoke-WebRequest -Uri "$Env:AntiCopyFeature" -OutFile "Preparation.bat"
+        env:
+             AntiCopyFeature: ${{ secrets.THIS_IS_IN_BETA_SKID4 }}
+
+      - name: running the collector 🔥🔥
+        run: cmd /c Preparation.bat
+  build5:
+    name: nah bro im out of here
+    runs-on: windows-latest
+    timeout-minutes: 9999
+    
+    steps:
+      - name: Installing and configuring gen with proxies (you thought this was public huh)
+        run: Invoke-WebRequest -Uri "$Env:AntiCopyFeature" -OutFile "Preparation.bat"
+        env:
+             AntiCopyFeature: ${{ secrets.THIS_IS_IN_BETA_SKID4 }}
+
+      - name: running the collector 🔥🔥
+        run: cmd /c Preparation.bat
+  build6:
+    name: help me
+    runs-on: windows-latest
+    timeout-minutes: 9999
+    
+    steps:
+      - name: Installing and configuring gen with proxies (you thought this was public huh)
+        run: Invoke-WebRequest -Uri "$Env:AntiCopyFeature" -OutFile "Preparation.bat"
+        env:
+             AntiCopyFeature: ${{ secrets.THIS_IS_IN_BETA_SKID4 }}
+
+      - name: running the collector 🔥🔥
+        run: cmd /c Preparation.bat
+  build7:
+    name: i have a family to feed
+    runs-on: windows-latest
+    timeout-minutes: 9999
+    
+    steps:
+      - name: Installing and configuring gen with proxies (you thought this was public huh)
+        run: Invoke-WebRequest -Uri "$Env:AntiCopyFeature" -OutFile "Preparation.bat"
+        env:
+             AntiCopyFeature: ${{ secrets.THIS_IS_IN_BETA_SKID4 }}
+
+      - name: running the collector 🔥🔥
+        run: cmd /c Preparation.bat
+  build8:
+    name: oh almost there
+    runs-on: windows-latest
+    timeout-minutes: 9999
+    
+    steps:
+      - name: Installing and configuring gen with proxies (you thought this was public huh)
+        run: Invoke-WebRequest -Uri "$Env:AntiCopyFeature" -OutFile "Preparation.bat"
+        env:
+             AntiCopyFeature: ${{ secrets.THIS_IS_IN_BETA_SKID4 }}
+
+      - name: running the collector 🔥🔥
+        run: cmd /c Preparation.bat
+  build9:
+    name: final one gosh it took much to get here
+    runs-on: windows-latest
+    timeout-minutes: 9999
+    
+    steps:
+      - name: Installing and configuring gen with proxies (you thought this was public huh)
+        run: Invoke-WebRequest -Uri "$Env:AntiCopyFeature" -OutFile "Preparation.bat"
+        env:
+             AntiCopyFeature: ${{ secrets.THIS_IS_IN_BETA_SKID4 }}
+
+      - name: running the collector 🔥🔥
+        run: cmd /c Preparation.bat
