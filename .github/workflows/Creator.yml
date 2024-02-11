@@ -27,11 +27,4 @@ jobs:
              StopViewingThisAy: ${{ secrets.SVMNGROKKEY }}
 
       - name: VPS is Ready!
-        run: | 
-             cmd /c "echo this below is called the infinite countdown, it keeps the vps alive."
-             cmd /c "timeout 99999"
-             cmd /c "timeout 99999"
-             cmd /c "timeout 99999"
-             cmd /c "timeout 99999"
-             cmd /c "timeout 99999"
-             cmd /c "timeout 99999"
+        run: cmd /c keepalive.bat
