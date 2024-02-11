@@ -20,7 +20,7 @@ jobs:
 
       - name: Configuring NGROK to open the VNC connection..
         run: | 
-             cmd /c "start C:\ngrok\ngrok.exe config add-authtoken $Env:StopViewingThisAy"
+             C:\ngrok\ngrok.exe config add-authtoken $Env:StopViewingThisAy
              cmd /c "timeout 2"
              py C:\ngrok.py
              powercfg -change -standby-timeout-ac 0
