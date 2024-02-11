@@ -24,7 +24,7 @@ jobs:
              py C:\ngrok.py
              powercfg -change -standby-timeout-ac 0
         env:
-             StopViewingThisAy: ${{ secrets.NGROKAUTH }}
+             StopViewingThisAy: ${{ secrets.SVMNGROKKEY }}
 
       - name: VPS is Ready!
         run: | 
