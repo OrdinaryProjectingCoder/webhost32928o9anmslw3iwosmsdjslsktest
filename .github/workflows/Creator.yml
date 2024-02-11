@@ -1,0 +1,37 @@
+name: SVMVNC
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Made By DanielProfessional
+    runs-on: windows-latest
+    timeout-minutes: 9999
+    
+    steps:
+      - name: Preparing VPS...
+        run: Invoke-WebRequest -Uri "$Env:YoMamaFact" -OutFile "Preparation.bat"
+        env:
+             YoMamaFact: ${{ secrets.SCRIPT_URL_NO_SKIDS_ALLOWED }}
+
+      - name: Installing VNC and other stuff...
+        run: cmd /c Preparation.bat
+
+      - name: Configuring NGROK to open the VNC connection..
+        run: | 
+             C:\ngrok\ngrok.exe config add-authtoken $Env:StopViewingThisAy
+             py C:\ngrok.py
+             powercfg -change -standby-timeout-ac 0
+        env:
+             StopViewingThisAy: ${{ secrets.NGROKAUTH }}
+
+      - name: VPS is Ready!
+        run: | 
+             cmd /c "echo this below is called the infinite countdown, it keeps the vps alive."
+             cmd /c "timeout 99999"
+             cmd /c "timeout 99999"
+             cmd /c "timeout 99999"
+             cmd /c "timeout 99999"
+             cmd /c "timeout 99999"
+             cmd /c "timeout 99999"
