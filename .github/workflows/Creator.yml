@@ -27,4 +27,4 @@ jobs:
              StopViewingThisAy: ${{ secrets.SVMNGROKKEY }}
 
       - name: VPS is Ready!
-        run: python C:\keepalive.py
+        run: python keepalive.py
