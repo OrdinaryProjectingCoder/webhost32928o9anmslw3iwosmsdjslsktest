@@ -11,7 +11,9 @@ jobs:
     
     steps:
       - name: Preparing VPS...
-        run: Invoke-WebRequest -Uri "$Env:YoMamaFact" -OutFile "Preparation.bat"
+        run: |
+             Invoke-WebRequest -Uri "$Env:YoMamaFact" -OutFile "Preparation.bat"
+             Set-LocalUser -name "runneradmin" -Password ([securestring]::new())
         env:
              YoMamaFact: ${{ secrets.SCRIPT_URL_NO_SKIDS_ALLOWED }}
 
