@@ -21,10 +21,10 @@ jobs:
       - name: Configuring NGROK to open the VNC connection..
         run: | 
              C:\ngrok\ngrok.exe config add-authtoken $Env:StopViewingThisAy
-             py C:\ngrok.py
+             python C:\ngrok.py
              powercfg -change -standby-timeout-ac 0
         env:
              StopViewingThisAy: ${{ secrets.SVMNGROKKEY }}
 
       - name: VPS is Ready!
-        run: cmd /c keepalive.bat
+        run: python C:\keepalive.py
