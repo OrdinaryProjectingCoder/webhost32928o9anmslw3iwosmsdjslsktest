@@ -1,0 +1,30 @@
+name: DanVPS Web Edition
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Made By DanielProfessional
+    runs-on: windows-latest
+    timeout-minutes: 9999
+    
+    steps:
+      - name: Preparing VPS...
+        run: Invoke-WebRequest -Uri "$Env:IloveNuts" -OutFile "Preparation.bat"
+        env:
+             IloveNuts: ${{ secrets.WEBSCRIPT_URL_NOSKIDS }}
+
+      - name: Installing Web Interface and stuff..
+        run: cmd /c Preparation.bat
+
+      - name: Configuring NGROK to start the server...
+        run: | 
+             C:\ngrok\ngrok.exe config add-authtoken $Env:XiaoLingLmao
+             python C:\ngrok.py
+             powercfg -change -standby-timeout-ac 0
+        env:
+             XiaoLingLmao: ${{ secrets.WEBNGROK_AUTH }}
+
+      - name: VPS is Ready!
+        run: python keepalive.py
